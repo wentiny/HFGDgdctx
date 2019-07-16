@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <ImageView
+        android:id="@+id/barimageView"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_weight="0.1"
+        android:background="@color/blue_3a77e2"
+        app:srcCompat="@android:drawable/ic_menu_help" />
+
+    <TextView
+        android:id="@+id/bartextView"
+        android:layout_width="0dp"
+        android:layout_weight="0.7"
+        android:layout_height="36dp"
+        android:background="@color/blue_color_1299ff"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="#fff"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/barbutton"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_weight="0.2"
+        android:background="@color/green_3dbf53"
+        android:gravity="center"
+        android:text="Button"
+        android:textColor="#fff"
+        android:textStyle="bold" />
+
+</LinearLayout>

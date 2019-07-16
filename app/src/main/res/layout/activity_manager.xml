@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.05"
+        android:gravity="center|left"
+        android:textSize="17dp"
+        android:text="作业车铁鞋巡检管理"
+        android:background="@color/theme_primary"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <FrameLayout
+        android:id="@+id/framelayout01"
+        android:layout_width="match_parent"
+        android:layout_weight="0.85"
+        android:layout_height="0dp">
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:gravity="center"
+            android:background="@drawable/tab_selector_bg"
+            android:text="防溜巡检记录" />
+
+        <TextView
+            android:id="@+id/textView69"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:gravity="center"
+            android:background="@drawable/tab_selector_bg"
+            android:text="燃油申请记录" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_selector_bg"
+            android:gravity="center"
+            android:text="用户管理"
+            android:textColor="#000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView68"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_selector_bg"
+            android:gravity="center"
+            android:text="作业车管理"
+            android:textColor="#000"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>
