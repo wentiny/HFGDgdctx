@@ -4,280 +4,363 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:text="" />
-
     <LinearLayout
-        android:visibility="gone"
+        android:id="@+id/cjlineartiexie"
         android:layout_width="match_parent"
-        android:layout_height="39dp"
-        android:orientation="horizontal">
+        android:layout_height="0dp"
+        android:layout_weight="0.9"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:text="" />
 
-        <view
-            class="android.support.v4.widget.Space"
-            id="@+id/view"
-            layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_weight="0.1"
-            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:orientation="horizontal">
+            <view
+                class="android.support.v4.widget.Space"
+                id="@+id/view"
+                layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/button16"
+                android:layout_width="0dp"
+                android:layout_weight="0.2"
+                android:background="@color/text_avgpre"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:textSize="11dp"
+                android:text="未审核" />
+            <view
+                class="android.support.v4.widget.Space"
+                id="@+id/view2"
+                layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/button17"
+                android:background="@color/green_3dbf53"
+                android:textSize="11dp"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_weight="0.2"
+                android:layout_height="wrap_content"
+                android:text="已完成" />
+            <view
+                class="android.support.v4.widget.Space"
+                id="@+id/view3"
+                layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/button18"
+                android:layout_width="0dp"
+                android:layout_weight="0.2"
+                android:layout_height="wrap_content"
+                android:background="@color/red_f23a3a"
+                android:textSize="11dp"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:text="被退回" />
+            <view
+                class="android.support.v4.widget.Space"
+                id="@+id/view4"
+                layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/button16"
-            android:layout_width="0dp"
-            android:layout_weight="0.2"
-            android:background="@color/text_avgpre"
-            android:layout_height="wrap_content"
-            android:textColor="#000"
-            android:textStyle="bold"
-            android:textSize="11dp"
-            android:text="未审核" />
-
-        <view
-            class="android.support.v4.widget.Space"
-            id="@+id/view2"
-            layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_weight="0.1"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:id="@+id/button17"
-            android:background="@color/green_3dbf53"
-            android:textSize="11dp"
-            android:textColor="#fff"
-            android:textStyle="bold"
-            android:layout_width="0dp"
-            android:layout_weight="0.2"
-            android:layout_height="wrap_content"
-            android:text="已完成" />
-
-        <view
-            class="android.support.v4.widget.Space"
-            id="@+id/view3"
-            layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_weight="0.1"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:id="@+id/button18"
-            android:layout_width="0dp"
-            android:layout_weight="0.2"
-            android:layout_height="wrap_content"
-            android:background="@color/red_f23a3a"
-            android:textSize="11dp"
-            android:textColor="#fff"
-            android:textStyle="bold"
-            android:text="被退回" />
-
-        <view
-            class="android.support.v4.widget.Space"
-            id="@+id/view4"
-            layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_weight="0.1"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TextView"
+                android:visibility="gone" />
+            <TextView
+                android:id="@+id/textView31"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:gravity="center|left"
+                android:text="作业车工区：" />
+            <Spinner
+                android:id="@+id/spinner9"
+                android:layout_width="0dp"
+                android:layout_weight="0.7"
+                android:layout_height="match_parent" />
+        </LinearLayout>
 
         <TextView
-            android:id="@+id/textView15"
+            android:id="@+id/textView34"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/gray_bfbfbf"
+            android:text="" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView33"
+                android:layout_width="0dp"
+                android:layout_weight="0.3"
+                android:textColor="#000"
+                android:gravity="center|left"
+                android:textStyle="bold"
+                android:layout_height="match_parent"
+                android:text="时间段：" />
+
+            <Button
+                android:id="@+id/button33"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.35"
+                android:background="@drawable/shape_btn_yellow"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:text="起始时间" />
+
+            <Button
+                android:id="@+id/button34"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.35"
+                android:background="@drawable/shape_btn_yellow"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:text="截止时间" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:orientation="horizontal">
+
+            <view
+                class="android.support.v4.widget.Space"
+                id="@+id/viewvv6"
+                layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_weight="0.2"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/button32"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:background="@drawable/shape_btn_green"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:text="查询" />
+
+            <view
+                class="android.support.v4.widget.Space"
+                id="@+id/viewvv5"
+                layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_weight="0.2"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView35"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="TextView"
-            android:visibility="gone" />
-
-        <TextView
-            android:id="@+id/textView31"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.3"
-            android:textColor="#000"
-            android:textStyle="bold"
-            android:gravity="center|left"
-            android:text="作业车工区：" />
-
-        <Spinner
-            android:id="@+id/spinner9"
-            android:layout_width="0dp"
-            android:layout_weight="0.7"
-            android:layout_height="match_parent" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/textView34"
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="@color/gray_bfbfbf"
-        android:text="" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/textView33"
-            android:layout_width="0dp"
-            android:layout_weight="0.3"
-            android:textColor="#000"
-            android:gravity="center|left"
-            android:textStyle="bold"
-            android:layout_height="match_parent"
-            android:text="时间段：" />
+            android:text="" />
 
         <Button
-            android:id="@+id/button33"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.35"
-            android:background="@drawable/shape_btn_yellow"
-            android:textStyle="bold"
-            android:textColor="#000"
-            android:text="起始时间" />
-
-        <Button
-            android:id="@+id/button34"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.35"
-            android:background="@drawable/shape_btn_yellow"
-            android:textStyle="bold"
-            android:textColor="#000"
-            android:text="截止时间" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="41dp"
-        android:orientation="horizontal">
-
-        <view
-            class="android.support.v4.widget.Space"
-            id="@+id/viewvv6"
-            layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_weight="0.2"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:id="@+id/button32"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.6"
-            android:background="@drawable/shape_btn_green"
-            android:textStyle="bold"
+            android:id="@+id/button35"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:background="@color/blue_3a77e2"
+            android:text="-)按作业车工区批量审核(-"
             android:textColor="#fff"
-            android:text="查询" />
+            android:textStyle="bold" />
 
-        <view
-            class="android.support.v4.widget.Space"
-            id="@+id/viewvv5"
-            layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_weight="0.2"
-            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView63"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.15"
+                android:background="@drawable/tablelayoutbian"
+                android:gravity="center"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:text="状态" />
+
+            <TextView
+                android:id="@+id/textView62"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.15"
+                android:background="@drawable/tablelayoutbian"
+                android:gravity="center"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:text="车号/编号" />
+
+            <TextView
+                android:id="@+id/textView61"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:background="@drawable/tablelayoutbian"
+                android:gravity="center"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:text="人员/日期" />
+
+            <TextView
+                android:id="@+id/textView60"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:background="@drawable/tablelayoutbian"
+                android:gravity="center"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:text="审核状态" />
+
+            <TextView
+                android:id="@+id/textView64"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.15"
+                android:background="@drawable/tablelayoutbian"
+                android:gravity="center"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:text="操作" />
+
+            <TextView
+                android:id="@+id/textView65"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.15"
+                android:background="@drawable/tablelayoutbian"
+                android:gravity="center"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:text="照片" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listview3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="5dp" />
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/textView35"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="" />
-
-    <Button
-        android:id="@+id/button35"
-        android:layout_width="wrap_content"
-        android:layout_height="34dp"
-        android:background="@color/blue_3a77e2"
-        android:text="-)按作业车工区批量审核(-"
-        android:textColor="#fff"
-        android:textStyle="bold" />
 
     <LinearLayout
+        android:id="@+id/cjlinearaddoil"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="0dp"
+        android:layout_weight="0.9"
+        android:visibility="gone"
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView63"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.15"
-            android:background="@drawable/tablelayoutbian"
-            android:gravity="center"
-            android:textColor="#000"
-            android:textStyle="bold"
-            android:text="状态" />
-
-        <TextView
-            android:id="@+id/textView62"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.15"
-            android:background="@drawable/tablelayoutbian"
-            android:gravity="center"
-            android:textColor="#000"
-            android:textStyle="bold"
-            android:text="车号/编号" />
-
-        <TextView
-            android:id="@+id/textView61"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.2"
-            android:background="@drawable/tablelayoutbian"
-            android:gravity="center"
-            android:textColor="#000"
-            android:textStyle="bold"
-            android:text="人员/日期" />
-
-        <TextView
-            android:id="@+id/textView60"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.2"
-            android:background="@drawable/tablelayoutbian"
-            android:gravity="center"
-            android:textColor="#000"
-            android:textStyle="bold"
-            android:text="审核状态" />
-
-        <TextView
-            android:id="@+id/textView64"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.15"
-            android:background="@drawable/tablelayoutbian"
-            android:gravity="center"
-            android:textColor="#000"
-            android:textStyle="bold"
-            android:text="操作" />
-
-        <TextView
-            android:id="@+id/textView65"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.15"
-            android:background="@drawable/tablelayoutbian"
-            android:gravity="center"
-            android:textColor="#000"
-            android:textStyle="bold"
-            android:text="照片" />
     </LinearLayout>
 
-    <ListView
-        android:id="@+id/listview3"
-        android:dividerHeight="5dp"
-        android:divider="@android:color/transparent"
+    <LinearLayout
+        android:id="@+id/cjlinearusermng"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="0dp"
+        android:layout_weight="0.9"
+        android:visibility="gone"
+        android:orientation="vertical">
+        <include android:id="@+id/container_usermng"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/activity_manager_manage"></include>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cjlinearzycmng"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.9"
+        android:visibility="gone"
+        android:orientation="vertical">
+        <include android:id="@+id/container_zycmng"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/activity_manager_manage"></include>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cjlinearswitch"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/textView93"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:background="@drawable/tab_selector_bg"
+            android:gravity="center"
+            android:textColor="@color/orange_deep"
+            android:textStyle="bold"
+            android:text="防溜铁鞋巡检" />
+        <TextView
+            android:id="@+id/textView94"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:background="@drawable/tab_selector_bg"
+            android:gravity="center"
+            android:textColor="@color/orange_deep"
+            android:textStyle="bold"
+            android:text="燃油申请记录" />
+        <TextView
+            android:id="@+id/textView95"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:background="@drawable/tab_selector_bg"
+            android:gravity="center"
+            android:textColor="@color/orange_deep"
+            android:textStyle="bold"
+            android:text="用户管理" />
+        <TextView
+            android:id="@+id/textView96"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:background="@drawable/tab_selector_bg"
+            android:gravity="center"
+            android:textColor="@color/orange_deep"
+            android:textStyle="bold"
+            android:text="作业车管理" />
+    </LinearLayout>
+
+
 </LinearLayout>

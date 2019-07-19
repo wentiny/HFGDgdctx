@@ -1,4 +1,4 @@
-package com.example.peisw.hfgdgdctx.Activities;
+package com.example.peisw.hfgdgdctx.OvanManage;
 
 
 import android.app.AlertDialog;
@@ -16,6 +16,7 @@ import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListAdapter;
@@ -24,14 +25,19 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.peisw.hfgdgdctx.OvanCjian.Viewer_ZycCj;
 import com.example.peisw.hfgdgdctx.R;
+import com.example.peisw.hfgdgdctx.Viewer_CkJl;
+import com.example.peisw.hfgdgdctx.Viewer_Image;
 import com.example.peisw.hfgdgdctx.utils.method;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 
@@ -62,6 +68,18 @@ public class FirstFragment extends Fragment{
     String[] t10=new String[counts];String[] rowid=new String[counts];
     String[] t11=new String[counts];String[] xjjl=new String[counts];
 
+    String[] t1_1=new String[counts];String[] mt_empnm=new String[counts];
+    String[] t2_1=new String[counts];String[] mt_zycnum=new String[counts];
+    String[] t3_1=new String[counts];String[] mt_txnum=new String[counts];
+    String[] t4_1=new String[counts];String[] mt_time=new String[counts];
+    String[] t5_1=new String[counts];String[] mt_idgq=new String[counts];
+    String[] t6_1=new String[counts];String[] mt_idcj=new String[counts];
+    String[] t7_1=new String[counts];String[] mt_orgnm=new String[counts];
+    String[] t8_1=new String[counts];String[] mt_gqpmis=new String[counts];
+    String[] t9_1=new String[counts];String[] mt_cjpmis=new String[counts];
+    String[] t10_1=new String[counts];String[] mt_rowid=new String[counts];
+    String[] t11_1=new String[counts];String[] mt_xjjl=new String[counts];
+
     String[] t20=new String[count2];String[] aid=new String[count2];
     String[] t21=new String[count2];String[] anm=new String[count2];
     List<String> data3,data4,data5,data6;
@@ -78,7 +96,7 @@ public class FirstFragment extends Fragment{
     Button btn19;
 
     List<String> data9,data6_1;
-    String tmpGqId,tmpSdate,tmpEdate,tmpSelectXgOrgid;
+    String tmpGqId,tmpSdate,tmpEdate,tmpSelectXgOrgid,tmpMultiGqId;
     String[] t15=new String[count2];String[] gqid=new String[count2];
     String[] t16=new String[count2];String[] gqnm=new String[count2];
 
@@ -87,7 +105,7 @@ public class FirstFragment extends Fragment{
     String[] t42=new String[counts];String[] xg_zycnum=new String[counts];
     String[] t43=new String[counts];String[] xg_gdname=new String[counts];
     String[] t44=new String[counts];String[] xg_zycid=new String[counts];
-    TextView tv23_1;
+    TextView tv23_1,tv14_1;
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState){
         View view = null;
         Bundle args = getArguments();
@@ -95,11 +113,11 @@ public class FirstFragment extends Fragment{
         if(args.getString("context").equals("tab01")){
             view = inflater.inflate(R.layout.activity_zyccj,container,false);
             final ListView lv3 = (ListView)view.findViewById(R.id.listview3);
-            TextView tv14 = (TextView)view.findViewById(R.id.textView14);
+            tv14_1 = (TextView)view.findViewById(R.id.textView14);
             final Spinner sp9 = (Spinner)view.findViewById(R.id.spinner9);
 
             data9 = new ArrayList<>();
-            tv14.setOnClickListener(new View.OnClickListener() {
+            tv14_1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     String res = method.doPostWithoutValue(method.myurl1+"/TXselect/ZycCj/AllRecode");
@@ -121,7 +139,7 @@ public class FirstFragment extends Fragment{
                     } catch (JSONException e) {e.printStackTrace();}
                     lv3.setAdapter(baseAdapter3);
                 }
-            });tv14.performClick();
+            });tv14_1.performClick();
 
             TextView tv31=(TextView)view.findViewById(R.id.textView31);
             tv31.setOnClickListener(new View.OnClickListener() {
@@ -216,8 +234,98 @@ public class FirstFragment extends Fragment{
                 }
             });
             ///////////////////////////////////////////////////////////////////////////////////////
-           view.findViewById(R.id.button35).setVisibility(View.GONE);
+           Button btn35 = (Button) view.findViewById(R.id.button35);
+            btn35.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                    View cv = View.inflate(getActivity(),R.layout.dialog_multi_permiss,null);
+                    builder.setView(cv).setTitle("按作业车工区批量审核");
+                    final AlertDialog alertDialog = builder.create();
 
+                    Spinner sp8 = (Spinner)cv.findViewById(R.id.spinner8);
+                    ArrayAdapter<String> adapter8 = new ArrayAdapter<String>(getActivity(),R.layout.shape_item_spinner,R.id.sPtextView,data9);
+                    adapter8.setDropDownViewResource(R.layout.shape_item_dropdown);
+                    sp8.setAdapter(adapter8);
+                    sp8.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i8, long l) {
+                            tmpMultiGqId = gqid[i8];
+                        }
+                        @Override
+                        public void onNothingSelected(AdapterView<?> adapterView) {
+                            tmpMultiGqId = gqid[0];
+                        }
+                    });
+
+                    final ListView lv5 = (ListView)cv.findViewById(R.id.listview5);
+                    Button btn29 = (Button)cv.findViewById(R.id.button29);
+                    btn29.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            List<String> nm = new ArrayList<String>();
+                            List<String> vl = new ArrayList<String>();
+                            nm.add("gqid");vl.add(tmpMultiGqId);
+                            String res = method.doPost(method.myurl1+"/TXselect/ZycCj/AllRecodeByMulti",nm,vl);
+                            try {
+                                JSONObject jtmp = new JSONObject(res);
+                                for(int i=0;i<counts;i++){
+                                    t1_1[i]="name"+i;mt_empnm[i]=jtmp.optString(t1_1[i]);
+                                    t2_1[i]="zycnum"+i;mt_zycnum[i]=jtmp.optString(t2_1[i]);
+                                    t3_1[i]="txnum"+i;mt_txnum[i]=jtmp.optString(t3_1[i]);
+                                    t4_1[i]="time"+i;mt_time[i]=jtmp.optString(t4_1[i]);
+                                    t5_1[i]="idgq"+i;mt_idgq[i]=jtmp.optString(t5_1[i]);
+                                    t6_1[i]="idcj"+i;mt_idcj[i]=jtmp.optString(t6_1[i]);
+                                    t7_1[i]="orgnm"+i;mt_orgnm[i]=jtmp.optString(t7_1[i]);
+                                    t8_1[i]="gq"+i;mt_gqpmis[i]=jtmp.optString(t8_1[i]);
+                                    t9_1[i]="cj"+i;mt_cjpmis[i]=jtmp.optString(t9_1[i]);
+                                    t10_1[i]="rowid"+i;mt_rowid[i]=jtmp.optString(t10_1[i]);
+                                    t11_1[i]="xjjl"+i;mt_xjjl[i]=jtmp.optString(t11_1[i]);
+                                }
+                            } catch (JSONException e) {e.printStackTrace();}
+                            lv5.setAdapter(baseAdapter5);
+                        }
+                    });
+
+                    final EditText ed3 = (EditText)cv.findViewById(R.id.editText3);
+                    cv.findViewById(R.id.button30).setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            List<String> nm = new ArrayList<String>();
+                            List<String> vl = new ArrayList<String>();
+                            nm.add("gqid");nm.add("pmis");
+                            vl.add(tmpMultiGqId);vl.add(ed3.getText().toString());
+                            String res = method.doPost(method.myurl1+"/TXupdate/CjPermissByMulti",nm,vl);
+                            try {
+                                JSONObject j = new JSONObject(res);
+                                Toast.makeText(getActivity(),j.optString("msg"),Toast.LENGTH_SHORT).show();
+                            } catch (JSONException e) {e.printStackTrace();}
+                            tv14_1.performClick();
+                            alertDialog.dismiss();
+                        }
+                    });
+
+                    cv.findViewById(R.id.button31).setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            List<String> nm = new ArrayList<String>();
+                            List<String> vl = new ArrayList<String>();
+                            nm.add("gdid");nm.add("pmis");
+                            vl.add(tmpMultiGqId);vl.add(ed3.getText().toString());
+                            String res = method.doPost(method.myurl1+"/TXupdate/GqMultiTuiHui",nm,vl);
+                            try {
+                                JSONObject j = new JSONObject(res);
+                                Toast.makeText(getActivity(),j.optString("msg"),Toast.LENGTH_SHORT).show();
+                            } catch (JSONException e) {e.printStackTrace();}
+                            tv14_1.performClick();
+                            alertDialog.dismiss();
+                        }
+                    });
+
+                    alertDialog.show();
+
+                }
+            });
 
         }//////////////////////////////////////////////////////////////////////////////////////////////////////
         if(args.getString("context").equals("tab02")){
@@ -428,7 +536,58 @@ public class FirstFragment extends Fragment{
                 tv55.setText(zycnum[i]+"/"+txnum[i]);
                 tv56.setText(empnm[i]+"/"+time[i]);
                 tv57.setText(gqpmis[i]+"/"+cjpmis[i]);
+                tv58.setText("审核");tv58.setBackgroundResource(R.color.green_3dbf53);tv58.setTextColor(Color.WHITE);
                 tv59.setText("照片");tv59.setBackgroundResource(R.color.blue_3a77e2);tv58.setTextColor(Color.WHITE);
+                tv58.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                        View childview = View.inflate(getActivity(),R.layout.dialog_permiss_view,null);
+                        builder.setTitle("").setView(childview);
+                        AlertDialog alertDialog = builder.create();
+
+                        final EditText ed1 = (EditText)childview.findViewById(R.id.editText);
+                        TextView tv13 = (TextView)childview.findViewById(R.id.textView13);
+                        tv13.setText("车号:"+zycnum[i]+"/铁鞋编号:"+txnum[i]+"\n巡检人:"+empnm[i]+"//岗点:"+orgnm[i]+" /巡检日期:"+time[i]+"巡检记录:"+xjjl[i]);
+
+                        Button btn14 = (Button)childview.findViewById(R.id.button14);
+                        btn14.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                String dateStr = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
+                                List<String> name02 = new ArrayList<String>();
+                                List<String> value02 = new ArrayList<String>();
+                                name02.add("rowid");name02.add("pmis");
+                                value02.add(rowid[i]);value02.add("审核通过:"+ed1.getText().toString()+","+Viewer_Managment.getEmpname+dateStr);
+                                String res02 = method.doPost(method.myurl1+"/TXupdate/CjPermiss",name02,value02);
+                                try {
+                                    JSONObject jtmp02 = new JSONObject(res02);
+                                    Toast.makeText(getActivity(),jtmp02.optString("msg"),Toast.LENGTH_SHORT).show();
+                                } catch (JSONException e) {e.printStackTrace();}
+                                tv14_1.performClick();
+                            }
+                        });
+
+                        Button btn15 = (Button)childview.findViewById(R.id.button15);//退回
+                        btn15.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                String dateStr = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
+                                List<String> name03 = new ArrayList<String>();
+                                List<String> value03 = new ArrayList<String>();
+                                name03.add("rowid");name03.add("pmis");
+                                value03.add(rowid[i]);value03.add("车间退回:"+ed1.getText().toString()+","+Viewer_Managment.getEmpname+dateStr);
+                                String res02 = method.doPost(method.myurl1+"/TXupdate/CjTuiHui",name03,value03);
+                                try {
+                                    JSONObject jtmp02 = new JSONObject(res02);
+                                    Toast.makeText(getActivity(),jtmp02.optString("msg"),Toast.LENGTH_SHORT).show();
+                                } catch (JSONException e) {e.printStackTrace();}
+                                tv14_1.performClick();
+                            }
+                        });
+                        alertDialog.show();
+                    }
+                });
                 tv59.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -642,6 +801,7 @@ public class FirstFragment extends Fragment{
             btn36.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    data6_1.clear();
                     try {
                         JSONObject json36_1 = new JSONObject(method.doPostWithoutValue(method.myurl1+"/Ovan/selectOrgs"));
                         for(int k=0;k<counts;k++){
@@ -685,6 +845,43 @@ public class FirstFragment extends Fragment{
                     });
 
                     alertDialog.show();
+                }
+            });
+            return ll;
+        }
+    };
+
+    BaseAdapter baseAdapter5 = new BaseAdapter() {
+        @Override
+        public int getCount() {
+            int index = 0;
+            for(int i=0;i<counts;i++){
+                if(mt_empnm[i]!=""){index=index+1;}
+            }return index;
+        }
+        @Override
+        public Object getItem(int i) {
+            return mt_empnm[i];
+        }
+        @Override
+        public long getItemId(int i) {
+            return i;
+        }
+
+        @Override
+        public View getView(final int i, View view, ViewGroup viewGroup) {
+            LinearLayout ll = (LinearLayout)LayoutInflater.from(getActivity()).inflate(R.layout.list_item_view1,null);
+            TextView tv6 = (TextView)ll.findViewById(R.id.textView6);
+            Button btn7 = (Button)ll.findViewById(R.id.button7);
+            tv6.setText("车号:"+mt_zycnum[i]+"/铁鞋编号:"+mt_txnum[i]+" //巡检人:"+mt_empnm[i]+"//岗点:"+mt_orgnm[i]+"//巡检日期:"+mt_time[i]+" //巡检记录:"+mt_xjjl[i]+"\n工区审核:"+mt_gqpmis[i]);
+            btn7.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(getActivity(),Viewer_Image.class);
+                    intent.putExtra("rowid",mt_rowid[i]);
+                    intent.putExtra("whichone",mt_zycnum[i]+"-"+mt_txnum[i]);
+                    intent.putExtra("empname",Viewer_Managment.getEmpname);
+                    startActivity(intent);
                 }
             });
             return ll;

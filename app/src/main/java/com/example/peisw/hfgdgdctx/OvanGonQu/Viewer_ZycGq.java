@@ -1,4 +1,4 @@
-package com.example.peisw.hfgdgdctx.Activities;
+package com.example.peisw.hfgdgdctx.OvanGonQu;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -23,6 +23,7 @@ import android.widget.Toast;
 
 import com.example.peisw.hfgdgdctx.MainActivity;
 import com.example.peisw.hfgdgdctx.R;
+import com.example.peisw.hfgdgdctx.Viewer_Image;
 import com.example.peisw.hfgdgdctx.utils.method;
 
 import org.json.JSONException;

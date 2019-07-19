@@ -6,10 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.peisw.hfgdgdctx.Activities.Viewer_Driver;
-import com.example.peisw.hfgdgdctx.Activities.Viewer_Managment;
-import com.example.peisw.hfgdgdctx.Activities.Viewer_ZycCj;
-import com.example.peisw.hfgdgdctx.Activities.Viewer_ZycGq;
+import com.example.peisw.hfgdgdctx.OvanCjian.Viewer_ZycCj;
+import com.example.peisw.hfgdgdctx.OvanGangDian.Viewer_Driver;
+import com.example.peisw.hfgdgdctx.OvanGonQu.Viewer_ZycGq;
+import com.example.peisw.hfgdgdctx.OvanManage.Viewer_Managment;
 import com.example.peisw.hfgdgdctx.utils.method;
 
 import org.json.JSONException;

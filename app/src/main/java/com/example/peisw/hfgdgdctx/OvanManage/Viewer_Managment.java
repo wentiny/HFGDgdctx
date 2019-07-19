@@ -1,9 +1,10 @@
-package com.example.peisw.hfgdgdctx.Activities;
+package com.example.peisw.hfgdgdctx.OvanManage;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.peisw.hfgdgdctx.MainActivity;
@@ -18,13 +19,16 @@ public class Viewer_Managment extends Activity {
     private FrameLayout frameLayout;
     FirstFragment f1,f2,f3,f4;
     public static Viewer_Managment instance;
+    public static String getEmpname;
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manager);
         instance = this;
+        getEmpname = getIntent().getStringExtra("empname");
 
         TextView tv19 = (TextView)findViewById(R.id.textView19);
         tv19.setText("作业车铁鞋巡检管理("+getIntent().getStringExtra("empname")+")");
+        LinearLayout llswitch = (LinearLayout)findViewById(R.id.cjlinearswitch);llswitch.setVisibility(View.GONE);
 
         tv20 = (TextView)findViewById(R.id.textView20);
         tv21 = (TextView)findViewById(R.id.textView21);

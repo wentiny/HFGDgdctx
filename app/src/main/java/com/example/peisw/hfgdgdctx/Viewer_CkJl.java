@@ -1,4 +1,4 @@
-package com.example.peisw.hfgdgdctx.Activities;
+package com.example.peisw.hfgdgdctx;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -10,7 +10,6 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.peisw.hfgdgdctx.R;
 import com.example.peisw.hfgdgdctx.utils.method;
 
 import org.json.JSONException;

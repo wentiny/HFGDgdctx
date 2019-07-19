@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/textView76"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:background="@drawable/tablelayoutbian_little_green"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:textColor="#000"
+            android:text="提报日期:\n" />
+        <EditText
+            android:id="@+id/editText4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:background="@drawable/bg_edittext_selector"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+        <TextView
+            android:id="@+id/textView77"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:background="@drawable/tablelayoutbian_little_green"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:textColor="#000"
+            android:text="提报工区:\n" />
+        <EditText
+            android:id="@+id/editText5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:background="@drawable/bg_edittext_selector"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/textView78"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:background="@drawable/tablelayoutbian_little_green"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:textColor="#000"
+            android:text="提报司机:\n" />
+        <EditText
+            android:id="@+id/editText6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:background="@drawable/bg_edittext_selector"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+        <TextView
+            android:id="@+id/textView79"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:background="@drawable/tablelayoutbian_little_green"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:textColor="#000"
+            android:text="作业车号:\n" />
+        <Spinner
+            android:id="@+id/spinner13"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/textView80"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:background="@drawable/tablelayoutbian_little_green"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:textColor="#000"
+            android:text="油箱剩油量(L):\n" />
+        <EditText
+            android:id="@+id/editText7"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:background="@drawable/bg_edittext_selector"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+        <TextView
+            android:id="@+id/textView81"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:background="@drawable/tablelayoutbian_little_green"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:textColor="#000"
+            android:text="备用油量(L):\n" />
+        <EditText
+            android:id="@+id/editText8"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:background="@drawable/bg_edittext_selector"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/textView82"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:background="@drawable/tablelayoutbian_little_green"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:textColor="#000"
+            android:text="当前总走行公里:\n" />
+        <EditText
+            android:id="@+id/editText9"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:background="@drawable/bg_edittext_selector"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+        <TextView
+            android:id="@+id/textView83"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:background="@drawable/tablelayoutbian_little_green"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:textColor="#000"
+            android:text="当前总工作小时:\n" />
+        <EditText
+            android:id="@+id/editText10"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:background="@drawable/bg_edittext_selector"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/textView84"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:background="@drawable/tablelayoutbian_little_green"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:textColor="#000"
+            android:text="本次申请加油量（L）:\n" />
+        <EditText
+            android:id="@+id/editText11"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:background="@drawable/bg_edittext_selector"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+        <TextView
+            android:id="@+id/textView85"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:background="@drawable/tablelayoutbian_little_green"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:textColor="#000"
+            android:text="本次申请备用油量（L）:\n" />
+        <EditText
+            android:id="@+id/editText12"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:background="@drawable/bg_edittext_selector"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView75"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/textView86"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:background="@drawable/tablelayoutbian_little_yellow"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:textColor="#000"
+            android:text="上次加油至今出库趟数:" />
+        <EditText
+            android:id="@+id/editText13"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:background="@drawable/bg_edittext_selector"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+        <TextView
+            android:id="@+id/textView87"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:background="@drawable/tablelayoutbian_little_yellow"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:textColor="#000"
+            android:text="用油（L）:" />
+        <EditText
+            android:id="@+id/editText14"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:background="@drawable/bg_edittext_selector"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/textView88"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:background="@drawable/tablelayoutbian_little_yellow"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:textColor="#000"
+            android:text="库内整备（打温）总时间:" />
+        <EditText
+            android:id="@+id/editText15"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:background="@drawable/bg_edittext_selector"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+        <TextView
+            android:id="@+id/textView89"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:background="@drawable/tablelayoutbian_little_yellow"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:textColor="#000"
+            android:text="用油（L）:" />
+        <EditText
+            android:id="@+id/editText16"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:background="@drawable/bg_edittext_selector"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/textView90"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:background="@drawable/tablelayoutbian_little_yellow"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:textColor="#000"
+            android:text="其他用油（简要说明）:" />
+        <EditText
+            android:id="@+id/editText17"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:background="@drawable/bg_edittext_selector"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+        <TextView
+            android:id="@+id/textView91"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:background="@drawable/tablelayoutbian_little_yellow"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:textColor="#000"
+            android:text="用油（L）:" />
+        <EditText
+            android:id="@+id/editText18"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:background="@drawable/bg_edittext_selector"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView92"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/button38"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@drawable/shape_btn_green"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:text="提交" />
+        <Button
+            android:id="@+id/button39"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@drawable/shape_btn_gray"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:text="取消" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,4 +1,4 @@
-package com.example.peisw.hfgdgdctx.Activities;
+package com.example.peisw.hfgdgdctx;
 
 import android.app.Activity;
 import android.graphics.Bitmap;

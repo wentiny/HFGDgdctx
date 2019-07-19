@@ -16,12 +16,12 @@
                 <!--category android:name="android.intent.category.LAUNCHER" /-->
             </intent-filter>
         </activity>
-        <activity android:name=".Activities.Viewer_Driver"></activity>
-        <activity android:name=".Activities.Viewer_ZycGq"></activity>
-        <activity android:name=".Activities.Viewer_ZycCj"></activity>
-        <activity android:name=".Activities.Viewer_Image"></activity>
-        <activity android:name=".Activities.Viewer_Managment"></activity>
-        <activity android:name=".Activities.Viewer_CkJl"></activity>
+        <activity android:name=".OvanGangDian.Viewer_Driver"></activity>
+        <activity android:name=".OvanGonQu.Viewer_ZycGq"></activity>
+        <activity android:name=".OvanCjian.Viewer_ZycCj"></activity>
+        <activity android:name=".Viewer_Image"></activity>
+        <activity android:name=".OvanManage.Viewer_Managment"></activity>
+        <activity android:name=".Viewer_CkJl"></activity>
 
         <provider
             android:authorities="com.example.peisw.hfgdgdctx.fileprovider"
